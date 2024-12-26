@@ -5,6 +5,7 @@ const paymentRouter = express.Router();
 
 paymentRouter.post('/api/order', async (req, res) => {
     try {
+        // console.log("payemt.js in payment ", req.body);
         const orderData = req.body;
         const result = await createOrder(orderData); // Execute the logic from orders.js
         console.log("yeh order succesfully created");
